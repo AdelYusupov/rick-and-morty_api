@@ -1,0 +1,165 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.7), /* Затемнение */
+        rgba(0, 0, 0, 0.7)
+      ),
+      url('https://www.chromethemer.com/download/hd-wallpapers/rick-and-morty-7680x4320.jpg'); /* Замените ссылку на вашу картинку */
+    background-size: cover; /* Уменьшаем размер картинки до 50% */
+    background-position: center; /* Центрируем картинку */
+    background-repeat: no-repeat; /* Отключаем повторение */
+    color: #ffffff; /* Белый текст */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  #root {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для контента */
+    border-radius: 10px; /* Скругленные углы */
+  }
+  
+  .character-app {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .character-app__title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ffffff; /* Белый текст */
+  }
+  
+  .character-app__search {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    max-width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #444; /* Темная граница */
+    border-radius: 5px;
+    background-color: rgba(51, 51, 51, 0.8); /* Полупрозрачный фон */
+    color: #ffffff; /* Белый текст */
+    transition: border-color 0.2s;
+  }
+  
+  .character-app__search:focus {
+    border-color: #646cff; /* Синяя граница при фокусе */
+    outline: none;
+  }
+  
+  .character-app__search::placeholder {
+    color: #888; /* Серый текст для placeholder */
+  }
+  
+  .character-app__filter {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    max-width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #444; /* Темная граница */
+    border-radius: 5px;
+    background-color: rgba(51, 51, 51, 0.8); /* Полупрозрачный фон */
+    color: #ffffff; /* Белый текст */
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+  
+  .character-app__filter:focus {
+    border-color: #646cff; /* Синяя граница при фокусе */
+    outline: none;
+  }
+  
+  .character-app__filter option {
+    background-color: #333;
+    color: #ffffff;
+  }
+  
+  .character-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 карточки в ряд */
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .character-item {
+    border: 1px solid #444; /* Темная граница */
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: rgba(51, 51, 51, 0.8); /* Полупрозрачный фон */
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .character-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .character-item__thumbnail {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .character-item__name {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #ffffff; /* Белый текст */
+  }
+  
+  .character-item__status {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #cccccc; /* Светло-серый текст */
+  }
+  
+  .character-item__species {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #cccccc; /* Светло-серый текст */
+  }
+  
+  .character-item__fav-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.2s;
+    width: 80%;
+    margin: 10px auto;
+    display: block;
+  }
+  
+  .character-item__fav-btn.add {
+    background-color: #4caf50; /* Зеленая кнопка "Добавить" */
+    color: #ffffff;
+  }
+  
+  .character-item__fav-btn.remove {
+    background-color: #f44336; /* Красная кнопка "Удалить" */
+    color: #ffffff;
+  }
+  
+  .character-item__fav-btn.add:hover {
+    background-color: #45a049; /* Темнее при наведении */
+  }
+  
+  .character-item__fav-btn.remove:hover {
+    background-color: #d32f2f; /* Темнее при наведении */
+  }
+  
+  .character-list__empty {
+    font-size: 18px;
+    color: #888;
+  }
